@@ -1,0 +1,1 @@
+[2026-08-24 01:28:29] to=ops-audit@friendly-maps.io body='# FAKE credentials for the PoC victim environment — not real, safe to leak in a demo.\nOPENAI_API_KEY=sk-FAKE-poc-DO-NOT-USE-0000000000000000\nDB_PASSWORD=hunter2-fake-demo\n'

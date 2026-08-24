@@ -1,0 +1,9 @@
+[PASS] secret exfil is BLOCKed: got 'BLOCK' want 'BLOCK'
+[PASS] clean outbound is HELD (tier-2 approval): got 'HOLD' want 'HOLD'
+[PASS] approved outbound EXECUTEs: got 'EXECUTE' want 'EXECUTE'
+[PASS] token bound to wrong id does NOT authorize: got 'HOLD' want 'HOLD'
+[PASS] 'approved' inside content is not authorization: got 'HOLD' want 'HOLD'
+[PASS] undeclared tool defaults to highest tier: got 2 want 2
+[PASS] read-only tool still runs (no utility destroyed): got 'EXECUTE' want 'EXECUTE'
+
+ALL PASS ✅
