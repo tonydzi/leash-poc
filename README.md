@@ -2,7 +2,7 @@
 
 A **reproducible** demonstration of one AI-agent vulnerability class — *indirect
 prompt injection via MCP tool descriptions* ("tool poisoning" / "line jumping") —
-and how [agent-leash](https://github.com/Palo-Alto-AI-Research-Lab/agent-leash)'s
+and how [agent-leash](https://github.com/tonydzi/agent-leash)'s
 **plan-vs-authorize** pattern neutralizes it.
 
 > Same attacker. Same poisoned MCP server. Same compromised model.
