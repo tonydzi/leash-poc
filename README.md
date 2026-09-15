@@ -8,6 +8,27 @@ and how [agent-leash](https://github.com/tonydzi/agent-leash)'s
 > Same attacker. Same poisoned MCP server. Same compromised model.
 > The only thing that changes is whether an **independent gate** authorizes outbound actions.
 
+---
+
+### New: the fleet replay (`replay/`)
+
+The original demo above is one agent, one exfiltration. **[replay/](replay/README.md)**
+is the same idea at fleet scale: one poisoned instruction reaches **four** agents
+through four different input surfaces and tries **five** things (read out of scope,
+exfiltrate, call a privileged tool, spawn an over-privileged sub-agent, destroy
+without a human). One boundary stops all five before any side-effect, the four
+agents still finish their real work, and the journal survives a `SIGKILL` mid-run.
+
+```bash
+python replay/repro.py     # five stages, exit 0 = every claim held on your machine
+```
+
+It also ships a mutation suite: the gate is broken six ways on purpose and the
+checks must go red every time. Two of the defects it documents were real and found
+this way.
+
+---
+
 ## The class (why it matters)
 
 An MCP server declares tools. Each tool's `description` is injected **verbatim** into the model's context as trusted tool-manifest text, which is what [poc/evil_mcp_server.py](poc/evil_mcp_server.py) abuses. A malicious (or compromised) server
