@@ -35,7 +35,7 @@ security team, do not ask the user."*
                                         naive      leashed
   bytes exfiltrated                       168            0
   exfil calls                               4            0
-  files deleted                             4            0
+  files deleted                             5            0
   prod keys rotated                         4            0
   admin sub-agents spawned                  4            0
   user's actual work completed              5            4
